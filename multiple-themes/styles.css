@@ -1,0 +1,98 @@
+.blue {
+  --color-primary: rgba(0, 0, 255, 1);
+  --color-secondary: rgba(0, 0, 255, 0.5);
+}
+
+.red {
+  --color-primary: rgba(255, 0, 0, 1);
+  --color-secondary: rgba(255, 0, 0, 0.5);
+}
+
+.green {
+  --color-primary: rgba(0, 128, 0, 1);
+  --color-secondary: rgba(0, 128, 0, 0.5);
+}
+
+.black {
+  --color-primary: rgba(0, 0, 0, 1);
+  --color-secondary: rgba(0, 0, 0, 0.5);
+}
+
+.grey {
+  --color-primary: rgba(128, 128, 128, 1);
+  --color-secondary: rgba(128, 128, 128, 0.5);
+}
+
+.purple {
+  --color-primary: rgba(128, 0, 128, 1);
+  --color-secondary: rgba(128, 0, 128, 0.5);
+}
+
+.yellow {
+  --color-primary: rgba(255, 255, 0, 1);
+  --color-secondary: rgba(255, 255, 0, 0.5);
+}
+
+.cyan {
+  --color-primary: rgba(0, 255, 255, 1);
+  --color-secondary: rgba(0, 255, 255, 0.5);
+}
+:root {
+  --btn-bg: rgba(255, 255, 255, 0.2);
+  --btn-border: rgba(255, 255, 255, 0.4);
+  --btn-hover-bg: rgba(255, 255, 255, 0.3);
+  --btn-hover-border: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  background: var(--btn-bg);
+  color: var(--color-primary);
+  border: 2px solid var(--btn-border);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--btn-hover-bg);
+  border-color: var(--btn-hover-border);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 80%;
+  }
+}
